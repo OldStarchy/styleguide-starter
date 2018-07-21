@@ -55,10 +55,22 @@ gulp.task('kss:clean', () => {
 gulp.task('kss:styleguide', () => {
 	return kss({
 		source: scssRoot,
-		css: fs
-			.readdirSync(scssRoot)
-			.filter(file => file.endsWith('.scss') && !file.startsWith('_'))
-			.map(file => 'css/' + file.substr(0, file.length - 5) + '.css'),
+		css: fs.existsSync('include.txt')
+			? fs
+					.readFileSync('include.txt')
+					.toString()
+					.split('\n')
+					.filter(file => !file.startsWith('#') && file.trim() !== '')
+					.map(file => 'css/' + file)
+			: fs
+					.readdirSync(scssRoot)
+					.filter(
+						file => file.endsWith('.scss') && !file.startsWith('_')
+					)
+					.map(
+						file =>
+							'css/' + file.substr(0, file.length - 5) + '.css'
+					),
 		builder: builderRoot,
 	});
 });

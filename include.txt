@@ -1,0 +1,4 @@
+# Defines the order of stylesheet includes in the styleguide html
+
+reset.css
+core.css
