@@ -1,12 +1,12 @@
 {
-  "name": "styleguide",
+  "name": "styleguide-starter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A mostly empty project setup for automatic generation of a styleguide using kss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+	"build": "npx gulp kss:build",
+	"watch": "npx gulp kss:watch"
   },
-  "author": "",
+  "author": "Nicholas Sorokin",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
