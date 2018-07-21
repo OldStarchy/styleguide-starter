@@ -1,1 +1,20 @@
 @import 'typography';
+
+/*
+Image
+
+Standard image format. Rotates on hover.
+
+Markup:
+<img src="/images/350x150.png" width="350" height="150">
+
+Style guide: Core.Image
+*/
+
+img {
+	transition: transform 250ms;
+
+	&:hover {
+		transform: rotate(180deg);
+	}
+}
