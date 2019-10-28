@@ -1,22 +1,21 @@
 {
-  "name": "styleguide-starter",
-  "version": "1.0.0",
-  "description": "A mostly empty project setup for automatic generation of a styleguide using kss",
-  "scripts": {
-	"build": "npx gulp kss:build",
-	"watch": "npx gulp kss:watch"
-  },
-  "author": "Nicholas Sorokin",
-  "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {
-    "browser-sync": "^2.24.5",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.1",
-    "gulp-sourcemaps": "^2.6.4",
-    "highlight.js": "^9.12.0",
-    "kss": "^3.0.0-beta.23",
-    "run-sequence": "^2.2.1"
-  }
+	"name": "styleguide-starter",
+	"version": "1.0.0",
+	"description": "A mostly empty project setup for automatic generation of a styleguide using kss",
+	"scripts": {
+		"build": "npx gulp kss:clean && npx gulp kss:styleguide && npx gulp sass:build",
+		"watch": "npx gulp kss:watch"
+	},
+	"author": "Nicholas Sorokin",
+	"license": "ISC",
+	"dependencies": {},
+	"devDependencies": {
+		"browser-sync": "^2.26.7",
+		"del": "^3.0.0",
+		"gulp": "^4.0.2",
+		"gulp-sass": "^4.0.2",
+		"gulp-sourcemaps": "^2.6.4",
+		"highlight.js": "^9.12.0",
+		"kss": "^3.0.0-beta.23"
+	}
 }

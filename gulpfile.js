@@ -2,7 +2,6 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const kss = require('kss');
 const fs = require('fs');
-const runSequence = require('run-sequence');
 const del = require('del');
 const browserSync = require('browser-sync');
 const sourceMaps = require('gulp-sourcemaps');
@@ -73,10 +72,6 @@ gulp.task('kss:styleguide', () => {
 					),
 		builder: builderRoot,
 	});
-});
-
-gulp.task('kss:build', () => {
-	return runSequence('kss:clean', 'kss:styleguide', 'sass:build');
 });
 
 gulp.task('kss:watch', () => {
